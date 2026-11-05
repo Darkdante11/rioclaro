@@ -177,12 +177,27 @@ La implementación técnica documentada genera un impacto directo en la estructu
 ## **7. EVIDENCIA DE USO**
 
 1. Creación del proyecto en Foundry.
+<img width="589" height="274" alt="Imagen1" src="https://github.com/user-attachments/assets/a790e710-f163-44da-b08e-5c6a1af2ee53" />
+
 2. Uso del modelo gpt-5-mini.
+<img width="589" height="280" alt="Imagen2" src="https://github.com/user-attachments/assets/d84847dc-3b30-4b56-b727-fa9c3c2809fd" />
+
 3. Creación del agente asistente-rioclaro.
+<img width="589" height="160" alt="Imagen3" src="https://github.com/user-attachments/assets/7d25dcfd-bac9-4dbf-b44d-5b19f248ed7e" />
+
+
 4. Despliegue del chatbot rioclaro.
+<img width="589" height="539" alt="Imagen4" src="https://github.com/user-attachments/assets/c70764f7-be3b-4c08-b3d2-3bf59d7bceb1" />
+
 5. Ineracción con chatbot.
+<img width="589" height="552" alt="Imagen5" src="https://github.com/user-attachments/assets/167137aa-05b1-4226-9e94-f6784ece0e39" />
+
 6. Pedidos en el chatbot.
+<img width="589" height="522" alt="Imagen6" src="https://github.com/user-attachments/assets/120cd794-375e-4b35-ab3a-3664243c0466" />
+
 7. Agente desplegado en Azure APPS.
+<img width="589" height="564" alt="Imagen7" src="https://github.com/user-attachments/assets/37451810-198f-49a3-8d53-a94dc9915e12" />
+
 ---
 
 ## **8. CONCLUSIONES**
