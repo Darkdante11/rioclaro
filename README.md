@@ -82,29 +82,31 @@ winget install Git.Git -e
 Ejecuta las instrucciones del agente desplegador en PowerShell:
 
 ```powershell
-# Definir variables
+# 0) Variables (ajusta los valores entre < >)
 $RG = "rg-rioclaro-ai901"
-$LOCATION = "eastus2"
+$LOCATION = "westus"
 $APP = "rioclaro-asistente-$(Get-Random -Maximum 99999)"
-$FOUNDRY_RG = "<grupo-recurso-foundry>"
-$FOUNDRY_NAME = "<nombre-recurso-foundry>"
-$ENDPOINT = "https://<recurso>.services.ai.azure.com/api/projects/<proyecto>"
+$FOUNDRY_RG = "rg-gera.ortega-1983"
+$FOUNDRY_NAME = "geraortega-ia-5994-resource"
+$ENDPOINT = "https://geraortega-ia-5994-resource.services.ai.azure.com/api/projects/geraortega-ia-5994"
 
-# 1. Crear grupo de recursos y App Service (Linux Node 24)
+# 1) Grupo de recursos + App Service (Linux, Node 24 LTS, plan B1) y primer despliegue
 az group create --name $RG --location $LOCATION
 az webapp up --name $APP --resource-group $RG --location $LOCATION --runtime "NODE:24-lts" --sku B1
 
-# 2. Configurar variables de entorno (App Settings)
+# 2) Variables de entorno de la app (App Settings)
 az webapp config appsettings set -g $RG -n $APP --settings FOUNDRY_PROJECT_ENDPOINT=$ENDPOINT FOUNDRY_AGENT_NAME=asistente-rioclaro
 
-# 3. Identidad administrada y asignación de rol "Foundry User"
+# 3) Identidad administrada del sistema
 $PRINCIPAL_ID = az webapp identity assign -g $RG -n $APP --query principalId -o tsv
+
+# 4) Rol Foundry User (antes Azure AI User) sobre el recurso de Foundry
 $FOUNDRY_ID = az cognitiveservices account show -g $FOUNDRY_RG -n $FOUNDRY_NAME --query id -o tsv
 az role assignment create --assignee-object-id $PRINCIPAL_ID --assignee-principal-type ServicePrincipal --role "53ca6127-db72-4b80-b1b0-d745d6d5456d" --scope $FOUNDRY_ID
 
-# 4. Reiniciar App Service y verificar
+# 5) Reinicia para tomar configuración y permisos
 az webapp restart -g $RG -n $APP
-Invoke-RestMethod "https://$APP.azurewebsites.net/health"
+"https://$APP.azurewebsites.net"
 ```
 
 ---
