@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asistente IA - Distribuidora Río Claro</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Distribuidora Río Claro</h1>
+    <p>Asistente Virtual Integrado - IA Responsable (AZ-901)</p>
+  </header>
+  <main class="chat" aria-live="polite">
+    <div id="messages" class="messages">
+      <div class="msg bot">¡Hola! Soy el asistente virtual de Distribuidora Río Claro. ¿En qué puedo ayudarte hoy con tus pedidos, catálogo o facturas?</div>
+    </div>
+    <form id="chat-form" class="composer">
+      <input id="input" type="text" maxlength="2000" placeholder="Escribe tu consulta aquí..." autocomplete="off" required>
+      <button id="send" type="submit">Enviar</button>
+    </form>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
