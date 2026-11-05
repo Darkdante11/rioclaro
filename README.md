@@ -1,6 +1,6 @@
 # Proyecto Integrador AI-901: Asistente e Integración IA para Distribuidora Río Claro
 
-Este proyecto implementa una solución completa de inteligencia artificial para **Distribuidora Río Claro** utilizando **Microsoft Foundry**, **Node.js Express** y **Azure App Service**, estructurado con agentes de **GitHub Copilot** y alineado a los principios de **IA Responsable (AZ-901)**.
+Este proyecto implementa una solución completa de inteligencia artificial para **Distribuidora Río Claro** utilizando **Microsoft Foundry**, **Node.js Express** y **Azure App Service**, estructurado con agentes de **GitHub Copilot** y alineado a los principios de **IA Responsable**.
 
 ## 🏗️ Arquitectura de la Solución
 - **Frontend:** Interfaz web liviana (HTML5/CSS3/JS Vanilla) adaptada para dispositivos móviles (bodega) y desktop.

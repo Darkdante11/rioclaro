@@ -15,7 +15,7 @@ if (!ENDPOINT) {
 
 const project = new AIProjectClient(ENDPOINT, new DefaultAzureCredential());
 const openai = project.getOpenAIClient();
-const agentRef = { body: { agent: { name: AGENT_NAME, type: "agent_reference" } } };
+const agentRef = { body: { agent_reference: { name: AGENT_NAME, type: "agent_reference" } } };
 
 const app = express();
 app.use(express.json({ limit: "16kb" }));
